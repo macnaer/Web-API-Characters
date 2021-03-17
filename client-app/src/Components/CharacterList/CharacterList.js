@@ -1,11 +1,22 @@
 import React from "react";
+import { connect } from "react-redux";
 
 // ChatacterItem component
 import CharacterItem from "./CharacterItem/CharacterItem";
 
-const CharacterList = () => {
+const CharacterList = ({ List, loading }) => {
+    console.log("List = ", List);
     return (
-        <CharacterItem />
+        <div className="container">
+            <div className="row">
+                <CharacterItem />
+            </div>
+        </div>
     )
 }
-export default CharacterList;
+const mapStateToProps = ({ CharacterReducer }) => {
+    console.log("mapStateToProps ", CharacterReducer);
+    const { List, loading } = CharacterReducer;
+    return { List, loading }
+}
+export default connect(mapStateToProps)(CharacterList);

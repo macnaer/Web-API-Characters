@@ -2,13 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-// App component
-import App from "./Components/App/App";
+// CharacterList component
+import CharacterList from "./Components/CharacterList/CharacterList";
 
-const Index = () => {
+// Connect redux to react
+import store from "./store";
+import { Provider } from "react-redux";
+
+const App = () => {
   return (
-    <App />
+    <Provider store={store}>
+      <CharacterList />
+    </Provider>
   )
 }
-ReactDOM.render(<Index />, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById("root"));
 
