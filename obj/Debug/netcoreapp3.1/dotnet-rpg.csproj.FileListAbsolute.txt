@@ -138,5 +138,3 @@ C:\Users\k2\Desktop\WebApi\dotnet-rpg\bin\Debug\netcoreapp3.1\Microsoft.Extensio
 C:\Users\k2\Desktop\WebApi\dotnet-rpg\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Console.dll
 C:\Users\k2\Desktop\WebApi\dotnet-rpg\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.ConfigurationExtensions.dll
 C:\Users\k2\Desktop\WebApi\dotnet-rpg\obj\Debug\netcoreapp3.1\dotnet-rpg.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\k2\Desktop\WebApi\dotnet-rpg\bin\Debug\netcoreapp3.1\package-lock.json
-C:\Users\k2\Desktop\WebApi\dotnet-rpg\bin\Debug\netcoreapp3.1\package.json
