@@ -4,13 +4,14 @@ import { CharacterLoaded } from "../../Actions/CharacterActions";
 
 // ChatacterItem component
 import CharacterItem from "./CharacterItem/CharacterItem";
-import { getAllCharacters } from "../../Services/api-service";
 import { useEffect } from "react";
 
-const CharacterList = ({ List, loading, CharacterLoaded }) => {
-    console.log("List = ", List);
+// Include HOC 
+import { WithApiService } from "../Hoc/with-api-service";
+
+const CharacterList = ({ List, loading, CharacterLoaded, apiStoreService }) => {
     useEffect(() => {
-        getAllCharacters().then(allCharacters => {
+        apiStoreService.getAllCharacters().then(allCharacters => {
             CharacterLoaded(allCharacters.data);
         })
     }, []);
@@ -33,4 +34,4 @@ const mapStateToProps = ({ CharacterReducer }) => {
 const mapDispachToProps = {
     CharacterLoaded
 }
-export default connect(mapStateToProps, mapDispachToProps)(CharacterList);
+export default WithApiService()(connect(mapStateToProps, mapDispachToProps)(CharacterList));
