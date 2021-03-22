@@ -21,13 +21,20 @@ const CharacterList = ({ List, loading, CharacterLoaded, apiStoreService }) => {
     return (
         <div className="container">
             <div className="row">
-                <CharacterItem />
+             
+                {List.map((item) => {
+                    return (
+                    <CharacterItem {...item} key={item.id} />
+                    );
+            
+                })}
             </div>
         </div>
     )
 }
 const mapStateToProps = ({ CharacterReducer }) => {
     console.log("mapStateToProps ", CharacterReducer);
+    
     const { List, loading } = CharacterReducer;
     return { List, loading }
 }
