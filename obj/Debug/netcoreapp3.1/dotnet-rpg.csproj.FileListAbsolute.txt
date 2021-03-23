@@ -213,3 +213,4 @@ C:\Users\master\Desktop\WebAPI\obj\Debug\netcoreapp3.1\staticwebassets\dotnet-rp
 C:\Users\master\Desktop\WebAPI\obj\Debug\netcoreapp3.1\dotnet-rpg.dll
 C:\Users\master\Desktop\WebAPI\obj\Debug\netcoreapp3.1\dotnet-rpg.pdb
 C:\Users\master\Desktop\WebAPI\obj\Debug\netcoreapp3.1\dotnet-rpg.genruntimeconfig.cache
+C:\Users\master\Desktop\WebAPI\bin\Debug\netcoreapp3.1\package-lock.json
