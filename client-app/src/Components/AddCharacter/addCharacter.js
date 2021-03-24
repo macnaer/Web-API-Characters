@@ -38,10 +38,10 @@ const AddCharacter = ({apiStoreService}) => {
         console.log(`Name: ${name}\nStrength: ${strength}\nHitsPoints: ${histPoints}\nDefense: ${defense}\nIntelligence: ${intelligence}`);
         const newCharacher = {
             "Name": name,
-            "HitPoints": histPoints,
-            "Strength": strength,
-            "Defense": defense,
-            "Intelligence": intelligence,
+            "HitPoints": parseInt(histPoints),
+            "Strength": parseInt(strength),
+            "Defense": parseInt(defense),
+            "Intelligence": parseInt(intelligence),
             "Class": 3
         }
         apiStoreService.addNewCharacter(newCharacher);
