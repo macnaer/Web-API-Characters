@@ -16,8 +16,6 @@ const CharacterList = ({ List, loading, CharacterLoaded, apiStoreService }) => {
         })
     }, []);
 
-
-
     return (
         <div className="container">
             <div className="row">
@@ -32,8 +30,9 @@ const CharacterList = ({ List, loading, CharacterLoaded, apiStoreService }) => {
         </div>
     )
 }
+
 const mapStateToProps = ({ CharacterReducer }) => {
-    console.log("mapStateToProps ", CharacterReducer);
+   
     
     const { List, loading } = CharacterReducer;
     return { List, loading }

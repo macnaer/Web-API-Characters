@@ -4,7 +4,7 @@ const URL = "/";
 
 export default  class ApiStoreService{
     getAllCharacters = () => {
-        const data = axios(URL + "character/getall")
+        const data = axios.get(URL + "character/getall")
             .then(response => {
                 return response.data
             }).catch(err => {
@@ -14,4 +14,16 @@ export default  class ApiStoreService{
         return data;
     }
     
+    addNewCharacter = (newCharacter) => {
+        console.log("newCharacter => ", newCharacter)
+        axios.post(URL + "character/", {
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            data: newCharacter
+        })
+            .then(responce => {
+                console.log("addNewCharacter responce ", responce);
+            }).catch(err => console.log(err))
+    }
 }
