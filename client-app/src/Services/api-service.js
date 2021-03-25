@@ -16,9 +16,10 @@ export default  class ApiStoreService{
     
     addNewCharacter = (newCharacter) => {
         console.log("newCharacter => ", newCharacter)
-        axios.post(URL + "character/", newCharacter)
+        const res = axios.post(URL + "character/", newCharacter)
             .then(responce => {
-                console.log("addNewCharacter responce ", responce);
+                 return responce;
             }).catch(err => console.log(err))
+        return res;
     }
 }

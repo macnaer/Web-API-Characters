@@ -1,4 +1,5 @@
 import React, {Fragment, useState} from "react";
+import { Redirect } from "react-router-dom"
 // Include HOC 
 import { WithApiService } from "../Hoc/with-api-service";
 
@@ -9,6 +10,7 @@ const AddCharacter = ({apiStoreService}) => {
     const[histPoints, setHistPoints] = useState("20 - 100");
     const[defense, setDefense] = useState("30 - 150");
     const[intelligence, setIntelligence] = useState("40 - 100");
+    const[isRedirect, setIsRedirect] = useState(false);
 
     const getIntelligence = (e) => {
         let intelligence = e.target.value;
@@ -44,10 +46,15 @@ const AddCharacter = ({apiStoreService}) => {
             "Intelligence": parseInt(intelligence),
             "Class": 3
         }
-        apiStoreService.addNewCharacter(newCharacher);
+        apiStoreService.addNewCharacter(newCharacher)
+        .then(response => {
+            console.log(response.data)
+            if (response.data.success){
+                console.log("INSIDE ");
+                
+            }
+        })
     }
-
-
 
     return(
         <Fragment>
